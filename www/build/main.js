@@ -58,7 +58,7 @@ var HomePage = /** @class */ (function () {
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Dev\FoodTruckApp\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <h3>Ionic Menu Starter</h3>\n\n  <p>\n    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.\n  </p>\n\n  <button ion-button secondary menuToggle>Toggle Menu</button>\n\n  <trucklist></trucklist>\n  \n</ion-content>\n'/*ion-inline-end:"C:\Dev\FoodTruckApp\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Dev\FoodTruckApp\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <trucklist></trucklist>\n  \n</ion-content>\n'/*ion-inline-end:"C:\Dev\FoodTruckApp\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
@@ -300,12 +300,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var TruckList = /** @class */ (function () {
     function TruckList() {
-        console.log('Hello TrucklistComponent Component');
-        this.text = 'Hello World';
+        this.trucks = ["Papi Queso", "Tin Kitchen"];
     }
     TruckList = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'trucklist',template:/*ion-inline-start:"C:\Dev\FoodTruckApp\src\components\trucklist\trucklist.html"*/'<!-- Generated template for the TrucklistComponent component -->\n<div>\n  TruckList!\n</div>\n'/*ion-inline-end:"C:\Dev\FoodTruckApp\src\components\trucklist\trucklist.html"*/
+            selector: 'trucklist',template:/*ion-inline-start:"C:\Dev\FoodTruckApp\src\components\trucklist\trucklist.html"*/'<ion-list>\n  <button ion-item *ngFor="let truck of trucks" (click)="itemSelected(item)">\n    {{ truck }}\n  </button>  \n</ion-list>\n'/*ion-inline-end:"C:\Dev\FoodTruckApp\src\components\trucklist\trucklist.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TruckList);

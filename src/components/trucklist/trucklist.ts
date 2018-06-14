@@ -12,11 +12,10 @@ import { Component } from '@angular/core';
 })
 export class TruckList {
 
-  text: string;
+  trucks: String[];
 
   constructor() {
-    console.log('Hello TrucklistComponent Component');
-    this.text = 'Hello World';
+    this.trucks = ["Papi Queso", "Tin Kitchen"];
   }
 
 }

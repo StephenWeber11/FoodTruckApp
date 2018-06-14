@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { TrucklistComponent } from './trucklist/trucklist';
+import { TruckList } from './trucklist/trucklist';
 @NgModule({
-	declarations: [TrucklistComponent],
+	declarations: [TruckList],
 	imports: [],
-	exports: [TrucklistComponent]
+	exports: [TruckList]
 })
 export class ComponentsModule {}

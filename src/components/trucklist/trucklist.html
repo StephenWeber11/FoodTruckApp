@@ -1,4 +1,5 @@
-<!-- Generated template for the TrucklistComponent component -->
-<div>
-  TruckList!
-</div>
+<ion-list>
+  <button ion-item *ngFor="let truck of trucks" (click)="itemSelected(item)">
+    {{ truck }}
+  </button>  
+</ion-list>
